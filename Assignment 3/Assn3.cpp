@@ -7,11 +7,11 @@ using namespace std;
 
 string dec_digit ("[0-9]");
 string hex_digit (dec_digit + "|[a-f]|[A-F]");
-string exp ("p|P");
+string exponent ("p|P");
 string suff ("(f|F|l|L)?");
 string sign ("(\\+|-)?");
 string hexa ("(" + hex_digit + ")+"); 
-string hex_floating_point ("^(0x|0X)(" + hexa + "|" + hexa + "." + hexa + "|." + hexa + ")(" + exp + ")(" + sign + ")(" + dec_digit +")(" + suff + ")$");
+string hex_floating_point ("^(0x|0X)(" + hexa + "|" + hexa + "." + hexa + "|." + hexa + ")(" + exponent + ")(" + sign + ")(" + dec_digit +")(" + suff + ")$");
 
 regex re(hex_floating_point);
 
